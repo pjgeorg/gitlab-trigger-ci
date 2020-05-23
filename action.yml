@@ -1,0 +1,21 @@
+name: 'Trigger GitLab CI'
+description: 'Trigger GitLab CI Job using the Pipeline API'
+inputs:
+  url:
+    description: 'GitLab CI URL'
+    required: true
+  cacert:
+    description: 'CA certificate (string) to use for connections to GitLab'
+  project_id:
+    description: 'GitLab project ID'
+    required: true
+  token:
+    description: 'GitLab CI Token'
+    required: true
+  ref:
+    description: 'Trigger GitLab CI pipeline of a specific ref (branch or tag)'
+    default: master
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
