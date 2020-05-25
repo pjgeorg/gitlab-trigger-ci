@@ -35,7 +35,7 @@ Time to wait before re-checking status of GitLab CI job status in ms. Default: 3
 ## Example usage
 
 ```yml
-uses: pjgeorg/gitlab-trigger-ci@v1
+uses: pjgeorg/gitlab-trigger-ci@v2
 with:
   host: "gitlab.com"
   port: 8443
