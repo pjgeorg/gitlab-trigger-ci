@@ -39,7 +39,7 @@ uses: pjgeorg/gitlab-trigger-ci@v2
 with:
   host: "gitlab.com"
   port: 8443
-  ca-bundle ${{ secrets.GITLAB_CA_BUNDLE }}
+  ca-bundle: ${{ secrets.GITLAB_CA_BUNDLE }}
   project-id: 880
   token: ${{ secrets.GITLAB_TRIGGER_TOKEN }}
   ref: master
