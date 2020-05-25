@@ -1,4 +1,4 @@
-# GitLab trigger CI docker action
+# GitLab trigger CI JavaScript action
 
 This action triggers a GitLab CI using the Pipeline API.
 
