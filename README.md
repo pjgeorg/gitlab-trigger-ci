@@ -4,15 +4,19 @@ This action triggers a GitLab CI using the Pipeline API.
 
 ## Inputs
 
-### `url`
+### `host`
 
-**Required** URL of the GitLab instance to issue commands to.
+**Required** Host running the GitLab CI instance to issue commands to.
 
-### `cacert`
+### `port`
 
-CA certificate (string) to use for connections to GitLab.
+**Required** Host port to connect to.
 
-### `project_id`
+### `ca-bundle`
+
+CA bungle (string) to use for connections to GitLab.
+
+### `project-id`
 
 **Required** GitLab project ID. Project must be publicly accessible.
 
@@ -22,7 +26,11 @@ CA certificate (string) to use for connections to GitLab.
 
 ### `ref`
 
-Trigger GitLab CI pipeline of a specific ref (branch or tag). Default `"master"`.
+Trigger GitLab CI pipeline of a specific ref (branch or tag). Default: `"master"`.
+
+### `delay`
+
+Time to wait before re-checking status of GitLab CI job status in ms. Default: 30000
 
 ## Example usage
 
