@@ -37,9 +37,11 @@ Time to wait before re-checking status of GitLab CI job status in ms. Default: 3
 ```yml
 uses: pjgeorg/gitlab-trigger-ci@v1
 with:
-  url: "https://gitlab.com"
-  cacert: ${{ secrets.GITLAB_CACERT }}
-  project_id: 880
+  host: "gitlab.com"
+  port: 8443
+  ca-bundle ${{ secrets.GITLAB_CA_BUNDLE }}
+  project-id: 880
   token: ${{ secrets.GITLAB_TRIGGER_TOKEN }}
   ref: master
+  delay: 30000
 ```
