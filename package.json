@@ -1,0 +1,31 @@
+{
+  "name": "gitlab-trigger-ci",
+  "version": "1.0.0",
+  "description": "This action triggers a GitLab CI using the Pipeline API.",
+  "main": "index.js",
+  "scripts": {
+    "package": "ncc build index.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjgeorg/gitlab-trigger-ci.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/pjgeorg/gitlab-trigger-ci/issues"
+  },
+  "homepage": "https://github.com/pjgeorg/gitlab-trigger-ci#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  }
+}
