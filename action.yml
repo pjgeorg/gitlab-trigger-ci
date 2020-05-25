@@ -1,12 +1,16 @@
 name: 'Trigger GitLab CI'
 description: 'Trigger GitLab CI Job using the Pipeline API'
 inputs:
-  url:
-    description: 'GitLab CI URL'
+  host:
+    description: 'GitLab CI Host'
     required: true
-  cacert:
-    description: 'CA certificate (string) to use for connections to GitLab'
-  project_id:
+  port:
+    description: 'GitLab CI Host port'
+    default: 443
+  ca-bundle:
+    description: 'CA bundle to use for connections to GitLab'
+    required: true
+  project-id:
     description: 'GitLab project ID'
     required: true
   token:
@@ -15,7 +19,10 @@ inputs:
   ref:
     description: 'Trigger GitLab CI pipeline of a specific ref (branch or tag)'
     default: master
+  delay:
+    description: 'Time to wait before re-checking status of GitLab CI job status in ms.'
+    default: 30000
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node12'
+  main: 'dist/index.js'
